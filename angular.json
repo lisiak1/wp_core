@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "wp-core:build:production"
+              "buildTarget": "wp-core:build:production"
             },
             "development": {
-              "browserTarget": "wp-core:build:development"
+              "buildTarget": "wp-core:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "wp-core:build"
+            "buildTarget": "wp-core:build"
           }
         },
         "test": {
