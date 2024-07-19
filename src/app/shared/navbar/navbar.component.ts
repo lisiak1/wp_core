@@ -1,4 +1,3 @@
-import { Location } from '@angular/common';
 import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
@@ -10,7 +9,7 @@ export class NavbarComponent implements OnInit {
   private toggleButton: HTMLElement | null | undefined;
   private sidebarVisible: boolean;
 
-  constructor(public location: Location, private element: ElementRef) {
+  constructor(private element: ElementRef) {
     this.sidebarVisible = false;
   }
 
@@ -40,6 +39,7 @@ export class NavbarComponent implements OnInit {
     this.sidebarVisible = false;
     html.classList.remove('nav-open');
   }
+
   sidebarToggle() {
     if (this.sidebarVisible === false) {
       this.sidebarOpen();
@@ -49,26 +49,10 @@ export class NavbarComponent implements OnInit {
   }
 
   isHome() {
-    let titlee = this.location.prepareExternalUrl(this.location.path());
-    if (titlee.charAt(0) === '#') {
-      titlee = titlee.slice(1);
-    }
-    if (titlee === '/home') {
-      return true;
-    } else {
-      return false;
-    }
+    return false;
   }
 
   isDocumentation() {
-    let titlee = this.location.prepareExternalUrl(this.location.path());
-    if (titlee.charAt(0) === '#') {
-      titlee = titlee.slice(1);
-    }
-    if (titlee === '/documentation') {
-      return true;
-    } else {
-      return false;
-    }
+    return false;
   }
 }

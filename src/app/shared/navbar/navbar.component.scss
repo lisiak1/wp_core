@@ -1,7 +1,21 @@
-.color-black {
-  background-color: black;
-}
+// .color-black {
+//   background-color: black;
+// }
 
 .navbar-collapse {
   flex-grow: 0;
+}
+
+// .navbar-toggler {
+//   outline: none !important;
+//   cursor: pointer;
+// }
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
 }
