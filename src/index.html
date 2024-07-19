@@ -37,5 +37,15 @@
   </head>
   <body>
     <app-root></app-root>
+
+    <script>
+      // Check if the 404 redirect is set in sessionStorage
+      if (sessionStorage.redirect) {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        // Redirect to the stored URL
+        window.location = redirect;
+      }
+    </script>
   </body>
 </html>
